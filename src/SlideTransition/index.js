@@ -1,6 +1,6 @@
 import React from "react";
 import classNames from "classnames";
-import {animateSwitch} from "../animateSwitch";
+import {animateSwitch} from "./animateSwitch";
 import "./styles.css";
 
 class SlideTransition extends React.Component {

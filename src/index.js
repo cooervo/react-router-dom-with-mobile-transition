@@ -2,7 +2,7 @@
  * Check out the article explaining this code in detail
  * at https://medium.com/@stephen.cook/animations-with-react-router-8e97222e25e1
  */
-import React, {Fragment} from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 import {HashRouter, Link, Route} from "react-router-dom";
 import SlideTransition from "./SlideTransition";
