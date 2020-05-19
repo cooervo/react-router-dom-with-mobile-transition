@@ -1,8 +1,7 @@
 import React from "react";
-import {Route} from "react-router-dom";
-import {Switch} from "react-router-dom";
+import {Switch, Route} from "react-router-dom";
 
-export const animateSwitch = (SlideIn) => ({updateStep, children}) => (
+export default (SlideIn) => ({updateStep, children}) => (
   <Route
     render={
       ({location}) => (

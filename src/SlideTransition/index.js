@@ -1,12 +1,12 @@
 import React from "react";
-import classNames from "classnames";
-import {animateSwitch} from "./animateSwitch";
+import animateSwitch from "./animateSwitch";
 import "./styles.css";
 
 class SlideTransition extends React.Component {
   constructor(props) {
     super(props);
     this.state = {slide: false};
+    this.onTransitionEnd = this.onTransitionEnd.bind(this);
   }
 
   componentDidMount() {
@@ -24,7 +24,7 @@ class SlideTransition extends React.Component {
     }
   }
 
-  onTransitionEnd = e => {
+  onTransitionEnd(e) {
     // the element transitions the `transform` property. Any other transitions
     // that occur on the element we can just ignore.
     if (e.propertyName !== "transform") return;
@@ -39,11 +39,7 @@ class SlideTransition extends React.Component {
     return (
       <div
         ref={node => (this.node = node)}
-        className={
-          classNames("slider-init", {
-            slide: this.state.slide
-          })
-        }>
+        className={`slider-init ${this.state.slide && 'slide'}`}>
         {this.props.children}
       </div>
     );

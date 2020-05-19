@@ -10,10 +10,6 @@ import SlideTransition from "./SlideTransition";
 import "./styles.css";
 
 class Container extends React.Component {
-  state = {
-    animate: false
-  };
-
   render() {
 
     return (
@@ -57,6 +53,12 @@ class Container extends React.Component {
               <Link className="link" to="/a">
                 E
               </Link>
+            )}
+          />
+          <Route
+            path="/foobar"
+            render={() => (
+              <h1>This is FOOBAR</h1>
             )}
           />
           <Route
